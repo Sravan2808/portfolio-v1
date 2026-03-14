@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import {JetBrains_Mono} from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const myFont = localFont({
+  src: [
+    {
+      path: "/fonts/Instagram Sans.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "/fonts/Instagram Sans Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "/fonts/Instagram Sans Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${myFont.className} bg-black selection:bg-[#D4D4D4] selection:text-black text-[#EBEBEB] `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
