@@ -20,7 +20,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex flex-col justify-center -translate-y-1">
+      <div className="flex flex-col justify-center translate-y-1">
 
         <h1 className="font-bold text-2xl md:text-4xl">Sravan Surya</h1>
 
