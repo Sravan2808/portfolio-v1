@@ -17,10 +17,20 @@ export default function Visitors() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/sravansurya/portfolio")
-      .then((res) => res.json())
-      .then((data) => setCount(data.value));
+    const fetchVisitors = async () => {
+      try {
+        const res = await fetch(
+          "https://api.countapi.xyz/hit/sravansurya/portfolio",
+        );
+        const data = await res.json();
+        setCount(data.value);
+      } catch (error) {
+        console.error("Visitor fetch failed");
+      }
+    };
+
+    fetchVisitors();
   }, []);
 
-  return <div>{formatVisitors(count)} Visitors</div>;
+  return <span>{count}</span>;
 }
