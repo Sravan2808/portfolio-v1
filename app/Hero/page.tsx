@@ -8,11 +8,11 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="max-w-xl mx-auto flex items-center px-5 py-3 gap-8 select-none mt-10">
+    <div className=" flex items-center px-5 py-3  gap-8 select-none mt-10">
 
       <div className="px-1 py-1.5 rounded-3xl outline outline-2 outline-zinc-300/25 overflow-hidden">
         <Image
-          className="w-28 h-28 md:w-34 md:h-34 rounded-3xl"
+          className="w-28 h-28 md:w-30 md:h-30 rounded-3xl"
           src="/hero.jpg"
           alt="Hero"
           width={96}
@@ -22,7 +22,7 @@ const Hero = () => {
 
       <div className="flex flex-col justify-center translate-y-1">
 
-        <h1 className="font-bold text-2xl md:text-4xl">Sravan Surya</h1>
+        <h1 className="font-bold text-2xl md:text-3xl">Sravan Surya</h1>
 
         <a
           href="https://twitter.com/ss19732004/"
@@ -34,7 +34,7 @@ const Hero = () => {
         </a>
 
         <FlipWords
-          className="text-gray-400 md:text-xl -translate-x-2"
+          className="text-gray-400 md:text-[15px] -translate-x-2"
           words={["Full Stack Developer", "Designer", "Engineer"]}
         />
 

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {JetBrains_Mono} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 
 const myFont = localFont({
   src: [
@@ -37,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${myFont.className} bg-black selection:bg-[#D4D4D4] selection:text-black text-[#EBEBEB] `}
+        className={`${myFont.className} bg-black selection:bg-[#D4D4C8] selection:text-black text-[#EBEBEB] max-w-xl mx-auto `}
       >
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
         <Analytics />
       </body>
     </html>
