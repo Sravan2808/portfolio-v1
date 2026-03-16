@@ -25,7 +25,7 @@ const Hero = () => {
         <h1 className="font-bold text-2xl md:text-3xl">Sravan Surya</h1>
 
         <a
-          href="https://twitter.com/ss19732004/"
+          href="https://x.com/SS19732004"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm md:text-lg hover:underline"
