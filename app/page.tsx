@@ -1,11 +1,13 @@
 import AboutMe from "./AboutMe/page";
 import Hero from "./Hero/page";
+import Socialmedia from "./SocailMedia/page";
 
 export default function Home() {
   return (
     <div >
       <Hero />
       <AboutMe />
+      <Socialmedia />
     </div>
   );
 }
