@@ -16,10 +16,10 @@ const Socialmedia = () => {
         profiles
       </h3>
 
-      <div className="flex gap-3 mt-3 flex-wrap">
+      <div className="flex gap-3 cursor-pointer mt-3  flex-wrap">
         {socialLinks.map((social, index) => (
           <LinkPreview key={index} url={social.url}>
-            <Button className="flex gap-2 items-center">
+            <Button className="flex gap-2 cursor-pointer items-center">
               {social.icon}
               {social.name}
             </Button>
@@ -27,8 +27,13 @@ const Socialmedia = () => {
         ))}
       </div>
 
-      <div className="mt-3 flex justify-center scale-90 overflow-hidden scrollbar-hide">
-        <GitHubCalendar username="sravan2808" />
+      <div className="mt-3  -translate-x-3 max-w-9xl flex justify-center scale-90 overflow-hidden ">
+        <GitHubCalendar
+          blockSize={12}
+          blockMargin={4}
+          fontSize={12}
+          username="sravan2808"
+        />
       </div>
     </div>
   );
