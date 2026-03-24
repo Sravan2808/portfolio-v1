@@ -33,19 +33,19 @@ const AboutMe = () => {
         new opportunities.
       </p>
 
-      <div className="flex items-center justify-start mt-3 gap-3">
-        <Button onClick={() => openLink("https://x.com/SS19732004")}>
+      <div className="flex items-center  justify-start mt-3 gap-3">
+        <Button className="cursor-pointer" onClick={() => openLink("https://x.com/SS19732004")}>
           <SiMinutemailer /> Twitter Dm
         </Button>
         <div className="text-bold text-sm -rotate-45">OR</div>
-        <Button onClick={() => openLink("mailto:vsravansurya@gmail.com.com")}>
+        <Button className="cursor-pointer" onClick={() => openLink("mailto:vsravansurya@gmail.com.com")}>
           <IoMail /> Email Me
         </Button>
         <div>|</div>
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button onClick={() => openLink("https://github.com/Sravan2808")}>
+            <Button className="cursor-pointer" onClick={() => openLink("https://github.com/Sravan2808")}>
               <SiGithub />
             </Button>
           </TooltipTrigger>
@@ -56,7 +56,7 @@ const AboutMe = () => {
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button
+            <Button className="cursor-pointer"
               onClick={() =>
                 openLink(
                   "https://drive.google.com/file/d/1SD95XKcO0feTLfJ77l5OIEn1Ihz0oIYe/view?usp=sharing",

@@ -1,5 +1,6 @@
 import AboutMe from "./AboutMe/page";
 import Hero from "./Hero/page";
+import Projects from "./Projects/page";
 import Socialmedia from "./SocailMedia/page";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Socialmedia />
+      <Projects />
     </div>
   );
 }
