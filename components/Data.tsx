@@ -20,6 +20,7 @@ import {
   SiReactquery,
   SiShadcnui,
   SiDrizzle,
+  SiDaisyui,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import {
@@ -69,126 +70,178 @@ export const skills = [
   {
     name: "JavaScript",
     icon: <RiJavascriptFill />,
-    url: "https://www.google.com/search?q=javascript&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=javascript",
   },
   {
     name: "TypeScript",
     icon: <SiTypescript />,
-    url: "https://www.google.com/search?q=typescript&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=typescript",
   },
   {
     name: "React",
     icon: <SiReact />,
-    url: "https://www.google.com/search?q=react&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=react",
   },
   {
     name: "Node.js",
     icon: <SiNodedotjs />,
-    url: "https://www.google.com/search?q=node.js&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=node.js",
   },
   {
     name: "Express.js",
     icon: <SiExpress />,
-    url: "https://www.google.com/search?q=express.js&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=express.js",
   },
   {
     name: "MongoDB",
     icon: <SiMongodb />,
-    url: "https://www.google.com/search?q=mongodb&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=mongodb",
   },
   {
     name: "Next.js",
     icon: <SiNextdotjs />,
-    url: "https://www.google.com/search?q=next.js&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=next.js",
   },
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss />,
-    url: "https://www.google.com/search?q=tailwind+css&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=tailwind+css",
   },
   {
     name: "Git",
     icon: <SiGit />,
-    url: "https://www.google.com/search?q=git&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=git",
   },
   {
     name: "Docker",
     icon: <SiDocker />,
-    url: "https://www.google.com/search?q=docker&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=docker",
   },
   {
     name: "Java",
     icon: <FaJava />,
-    url: "https://www.google.com/search?q=java&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=java",
   },
   {
     name: "Python",
     icon: <SiPython />,
-    url: "https://www.google.com/search?q=python&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=python",
   },
   {
     name: "Github",
     icon: <SiGithub />,
-    url: "https://www.google.com/search?q=github&sxsrf=ANbL-n7bNXvRiH6VslHsiuCOFqp0F7sSbQ%3A1774713607405",
+    url: "https://www.google.com/search?q=github",
   },
   {
     name: "Figma",
     icon: <SiFigma />,
-    url: "https://www.google.com/search?q=figma&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=figma",
   },
   {
     name: "Tanstack Query",
     icon: <SiReactquery />,
-    url: "https://www.google.com/search?q=tanstack+query&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=tanstack+query",
   },
   {
     name: "Prisma",
     icon: <SiPrisma />,
-    url: "https://www.google.com/search?q=prisma&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=prisma",
   },
   {
     name: "Redis",
     icon: <SiRedis />,
-    url: "https://www.google.com/search?q=redis&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=redis",
   },
   {
     name: "Redux",
     icon: <SiRedux />,
-    url: "https://www.google.com/search?q=redux&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=redux",
   },
   {
     name: "SQL",
     icon: <FaDatabase />,
-    url: "https://www.google.com/search?q=sql&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=sql",
   },
   {
     name: "ShadCN",
     icon: <SiShadcnui />,
-    url: "https://www.google.com/search?q=shadcn&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=shadcn",
   },
   {
     name: "Gsap",
     icon: <SiGreensock />,
-    url: "https://www.google.com/search?q=gsap&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=gsap",
   },
   {
     name: "Zustand",
     icon: <FaDatabase />,
-    url: "https://www.google.com/search?q=zustand&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=zustand",
   }, // using db icon as fallback
   {
     name: "Linux",
     icon: <SiLinux />,
-    url: "https://www.google.com/search?q=linux&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=linux",
   },
   {
     name: "Drizzle",
     icon: <SiDrizzle />,
-    url: "https://www.google.com/search?q=drizzle&sxsrf=ANbL-n七bNXvRiH6VslHsiuCOFqp0F七sSbQ%3A1七年4七1360七年405",
+    url: "https://www.google.com/search?q=drizzle",
   },
   {
     name: "Aws",
     icon: <FaAws />,
-    url: "https://www.google.com/search?q=aws&sxsrf=ANbL-n seven bNXvRiH6VslHsiuCOFqp0F seven sSbQ%3A1 seven 4 seven 1360 seven 405",
+    url: "https://www.google.com/search?q=aws",
+  },
+];
+
+export const projects = [
+  {
+    title: "DevTinder",
+    githubUrl: "https://github.com/Sravan2808/DevTinder",
+    websiteUrl: "https://devtinder-ebgf.onrender.com/",
+    description: `Developed a full-stack matchmaking platform inspired by Tinder, designed specifically for developers to connect, collaborate, and build networks. The frontend was built using Vite and React, with React Router handling seamless navigation, Daisy UI for modern UI components, and Redux Toolkit for efficient state management.
+
+Implemented a secure authentication system using JWT for authorization, Bcrypt for password hashing, and cookies with proper CORS configuration to ensure safe client-server communication. The application includes protected routes that validate user tokens and automatically redirect unauthorized users to the login page.
+
+Key features include user profile management with real-time updates and toast notifications, connection request functionality (send, ignore, accept, reject), and a personalized developer feed. The platform ensures a smooth end-to-end user experience, including login/logout flows, dynamic navbar updates, and consistent state handling with Redux DevTools integration.
+
+The application was successfully deployed on AWS EC2, configured with Nginx for efficient request handling. The frontend build was optimized using Vite and served through static hosting, ensuring fast performance and scalability.`,
+    stack: [
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs />,
+        url: "https://www.google.com/search?q=node.js",
+      },
+      {
+        name: "React",
+        icon: <SiReact />,
+        url: "https://www.google.com/search?q=react",
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+        url: "https://www.google.com/search?q=express.js",
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+        url: "https://www.google.com/search?q=mongodb",
+      },
+      {
+        name: "Redux",
+        icon: <SiRedux />,
+        url: "https://www.google.com/search?q=redux",
+      },
+      {
+        name: "DaisyUI",
+        icon: <SiDaisyui />,
+        url: "https://www.google.com/search?q=daisyui",
+      },
+    ],
   },
 ];
