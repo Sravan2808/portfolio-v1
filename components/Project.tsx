@@ -1,25 +1,32 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import PulseDot from "@/components/PulseDot";
 import ArrowIcon from "./ArrowIcon";
+import { useRouter } from "next/navigation";
 
 interface ProjectProps {
   Title: string;
   Background: string;
   PreviewImage: string;
   Content: string;
-  url?:string
+  url?: string;
 }
 
-
-const Project = ({ Title, Background, PreviewImage, Content , url }: ProjectProps) => {
+const Project = ({
+  Title,
+  Background,
+  PreviewImage,
+  Content,
+  url,
+}: ProjectProps) => {
+  const router = useRouter();
   return (
-    <div className="group w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-grabbing">
-
+    <div onClick={() => router.push("/ViewProject")} className="group w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-grabbing">
       {/* Top Image Section */}
-      <div onClick={()=> window.open(url, "_blank")} className="relative w-full h-[200px] overflow-hidden rounded-[14px]">
-
+      <div
+        className="relative w-full h-[200px] overflow-hidden rounded-[14px]"
+      >
         <div className="absolute inset-0 bg-[#33323266]" />
 
         <Image
@@ -71,13 +78,10 @@ const Project = ({ Title, Background, PreviewImage, Content , url }: ProjectProp
       </div>
 
       {/* Content */}
-      <div className="mt-1 text-[var(--light-gray)] text-sm">
-        {Content}
-      </div>
+      <div className="mt-1 text-[var(--light-gray)] text-sm">{Content}</div>
 
       {/* View Project */}
       <div
-      onClick={() => window.open(url, "_blank")}
         className="
         mt-2 flex items-center gap-2
         text-[var(--light-gray)]
@@ -86,12 +90,12 @@ const Project = ({ Title, Background, PreviewImage, Content , url }: ProjectProp
         "
       >
         View Project
-
-        <div onClick={()=>window.open(url,"_blank")} className="transition-transform duration-300 group-hover:rotate-0 rotate-[-39deg]">
+        <div
+          className="transition-transform duration-300 group-hover:rotate-0 rotate-[-39deg]"
+        >
           <ArrowIcon />
         </div>
       </div>
-
     </div>
   );
 };
