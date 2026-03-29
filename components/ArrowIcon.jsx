@@ -1,8 +1,12 @@
-const ArrowIcon = ({ rotate = 0, color = "var(--light-gray)" }) => {
+const ArrowIcon = ({
+  rotate = 0,
+  color = "var(--light-gray)",
+  className = "",
+}) => {
   return (
     <svg
       viewBox="0 0 28 20"
-      className="w-5 h-5 transition-all duration-300"
+      className={`w-5 h-5 transition-all duration-300 ${className}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
       <path
