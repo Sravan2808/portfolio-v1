@@ -4,6 +4,7 @@ import "./globals.css";
 import {JetBrains_Mono} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { GlobalSounds } from "@/components/GlobalSounds";
 
 const myFont = localFont({
   src: [
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body
         className={`${myFont.className} bg-foreground selection:bg-[#D4D4C8] selection:text-black text-[#EBEBEB] max-w-3xl h-screen mx-auto `}
       >
+        <GlobalSounds />
         <TooltipProvider>{children}</TooltipProvider>
         <Analytics />
       </body>

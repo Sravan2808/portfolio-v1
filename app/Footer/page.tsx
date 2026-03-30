@@ -11,7 +11,7 @@ const Footer = () => {
         whileInView={{ opacity: 0.8, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false }}
-        className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-b from-transparent via-[#10175A]/50 to-[#254F97] blur-[2px] -z-10"
+        className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-b from-transparent via-[#10175A]/40 to-[#254F97] blur-[2px] -z-10"
       />
 
       {/* Footer Content */}
