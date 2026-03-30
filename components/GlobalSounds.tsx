@@ -38,6 +38,7 @@ export function GlobalSounds() {
         const isProjectOrBlog =
           target.closest('[data-type="project"]') ||
           target.closest('[data-type="blog"]') ||
+          target.closest('[data-type="whoosh"]') ||
           target.closest('a[href*="/Projects"]') ||
           target.closest('a[href*="/Blogs"]');
 
