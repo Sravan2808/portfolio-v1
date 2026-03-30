@@ -1,10 +1,5 @@
 "use client";
-import Time from "@/components/Time";
-import ToggleImage from "@/components/ToggleImage";
-import { FlipWords } from "@/components/ui/flip-words";
-import Image from "next/image";
-import { CiStopwatch } from "react-icons/ci";
-import { MdLoop, MdOutlineRemoveRedEye } from "react-icons/md";
+
 import ToggableHeroImage from "@/components/ToggableHeroImage";
 
 const Hero = () => {
