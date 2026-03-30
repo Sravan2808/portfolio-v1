@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import MorphImageDialog from "@/components/MorphImageDialog";
+import MorphImageDialog from "@/components/motion-primitives/morphing-dialog";
 
 const ToggleImage: React.FC = () => {
   const [isFirst, setIsFirst] = useState<boolean>(true);
