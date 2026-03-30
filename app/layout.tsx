@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {JetBrains_Mono} from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { GlobalSounds } from "@/components/GlobalSounds";
 
@@ -43,7 +41,6 @@ export default function RootLayout({
       >
         <GlobalSounds />
         <TooltipProvider>{children}</TooltipProvider>
-        <Analytics />
       </body>
     </html>
   );

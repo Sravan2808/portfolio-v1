@@ -34,7 +34,7 @@ const ViewProject = ({}) => {
         <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl">
           <img
             className="w-full h-auto object-cover"
-            src="./Chill Mario.gif"
+            src="/images/Chill Mario.gif"
             alt="Project Preview"
           />
         </div>

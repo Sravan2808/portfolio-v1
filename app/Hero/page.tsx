@@ -8,8 +8,8 @@ import {
   MorphingDialogClose,
 } from "@/components/motion-primitives/morphing-dialog";
 import Time from "@/components/Time";
+import ToggleImage from "@/components/ToggleImage";
 import { FlipWords } from "@/components/ui/flip-words";
-import Visitors from "@/components/Vistors";
 import Image from "next/image";
 import { CiStopwatch } from "react-icons/ci";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
@@ -22,14 +22,14 @@ const Hero = () => {
           <MorphingDialogTrigger className="flex">
             <MorphingDialogImage
               className="w-28 h-28 md:w-30 md:h-30 rounded-3xl object-cover"
-              src="/Hero.jpg"
+              src="/images/Hero.jpg"
               alt="Hero"
             />
           </MorphingDialogTrigger>
           <MorphingDialogContainer>
-            <MorphingDialogContent className="relative max-w-[80vw] max-h-[80vh] w-fit sm:w-[500px] rounded-3xl overflow-hidden shadow-xl">
+            <MorphingDialogContent className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl">
               <MorphingDialogImage
-                src="/Hero.jpg"
+                src="/images/Hero.jpg"
                 alt="Hero"
                 className="w-full h-full object-cover"
               />
@@ -62,10 +62,7 @@ const Hero = () => {
             <Time />
           </div>
 
-          <div className="flex items-center gap-1">
-            <MdOutlineRemoveRedEye size={18} />
-            <Visitors />
-          </div>
+          <div className="flex items-center gap-1">{/* <ToggleImage /> */}</div>
         </div>
       </div>
     </div>
