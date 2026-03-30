@@ -22,7 +22,7 @@ const Project = ({
 }: ProjectProps) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push("/ViewProject")} className="group w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-grabbing">
+    <div onClick={() => router.push("/ViewProject")} data-type="project" className="group w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-pointer">
       {/* Top Image Section */}
       <div
         className="relative w-full h-[200px] overflow-hidden rounded-[14px]"
