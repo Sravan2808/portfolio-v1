@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { GlobalSounds } from "@/components/GlobalSounds";
+import { BichonFollower } from "@/components/bichon_follower";
 
 const myFont = localFont({
   src: [
@@ -40,7 +41,10 @@ export default function RootLayout({
         className={`${myFont.className} bg-foreground selection:bg-[#D4D4C8] selection:text-black text-[#EBEBEB] max-w-3xl h-screen mx-auto `}
       >
         <GlobalSounds />
-        <TooltipProvider>{children}</TooltipProvider>
+        <TooltipProvider>
+          {children}
+          <BichonFollower />
+        </TooltipProvider>
       </body>
     </html>
   );

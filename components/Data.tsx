@@ -21,6 +21,7 @@ import {
   SiShadcnui,
   SiDrizzle,
   SiDaisyui,
+  SiSocketdotio,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import {
@@ -192,6 +193,10 @@ export const skills = [
     icon: <FaAws />,
     url: "https://www.google.com/search?q=aws",
   },
+  {name:"Socket.io",
+   icon: <SiSocketdotio />,
+   url: "https://www.google.com/search?q=socket.io",
+  }
 ];
 
 export const projects = [
@@ -242,6 +247,11 @@ The application was successfully deployed on AWS EC2, configured with Nginx for 
         icon: <SiDaisyui />,
         url: "https://www.google.com/search?q=daisyui",
       },
+      {
+        name:"Socket.io",
+        icon: <SiSocketdotio />,
+        url: "https://www.google.com/search?q=socket.io",
+      }
     ],
   },
 ];
