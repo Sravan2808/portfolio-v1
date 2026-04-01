@@ -1,22 +1,27 @@
+"use client";
+import { motion } from "motion/react";
+
 const ArrowIcon = ({
   rotate = 0,
   color = "var(--light-gray)",
   className = "",
 }) => {
   return (
-    <svg
+    <motion.svg
       viewBox="0 0 28 20"
-      className={`w-5 h-5 transition-all duration-300 ${className}`}
-      style={{ transform: `rotate(${rotate}deg)` }}
+      className={`w-5 h-5 ${className}`}
+      animate={{ rotate }}
+      transition={{ duration: 0.3 }}
     >
-      <path
+      <motion.path
         d="M5 12H19M19 12L13 6M19 12L13 18"
-        stroke={color}
+        animate={{ stroke: color }}
+        transition={{ duration: 0.3 }}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
+    </motion.svg>
   );
 };
 

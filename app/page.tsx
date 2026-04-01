@@ -8,7 +8,7 @@ import Footer from "./Footer/page";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Hero />
       <AboutMe />
       <Socialmedia />
