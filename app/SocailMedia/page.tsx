@@ -27,13 +27,15 @@ const Socialmedia = () => {
         ))}
       </div>
 
-      <div className="mt-3  -translate-x-3 max-w-9xl flex justify-center scale-90 overflow-hidden ">
-        <GitHubCalendar
-          blockSize={12}
-          blockMargin={4}
-          fontSize={12}
-          username="sravan2808"
-        />
+      <div className="mt-5 w-full overflow-x-auto flex justify-start md:justify-center pb-2">
+        <div className="min-w-max">
+          <GitHubCalendar
+            blockSize={12}
+            blockMargin={4}
+            fontSize={12}
+            username="sravan2808"
+          />
+        </div>
       </div>
     </div>
   );

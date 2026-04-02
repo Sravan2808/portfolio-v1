@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${myFont.className} bg-foreground selection:bg-[#D4D4C8] selection:text-black text-[#EBEBEB] max-w-3xl h-screen mx-auto `}
+        className={`${myFont.className} bg-foreground selection:bg-[#D4D4C8] selection:text-black text-[#EBEBEB] max-w-3xl h-screen mx-auto overflow-x-hidden`}
       >
         <GlobalSounds />
         <TooltipProvider>
