@@ -22,6 +22,7 @@ import {
   SiDrizzle,
   SiDaisyui,
   SiSocketdotio,
+  SiLangchain,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import {
@@ -33,6 +34,7 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import { RiJavascriptFill } from "react-icons/ri";
+import { MdMail } from "react-icons/md";
 
 export const socialLinks = [
   {
@@ -193,15 +195,16 @@ export const skills = [
     icon: <FaAws />,
     url: "https://www.google.com/search?q=aws",
   },
-  {name:"Socket.io",
-   icon: <SiSocketdotio />,
-   url: "https://www.google.com/search?q=socket.io",
-  }
+  {
+    name: "Socket.io",
+    icon: <SiSocketdotio />,
+    url: "https://www.google.com/search?q=socket.io",
+  },
 ];
 
 export const projects = [
   {
-    title: "DevTinder",
+    title: "DevMatch",
     githubUrl: "https://github.com/Sravan2808/DevTinder",
     websiteUrl: "https://devtinder-ebgf.onrender.com/",
     description: `Developed a full-stack matchmaking platform inspired by Tinder, designed specifically for developers to connect, collaborate, and build networks. The frontend was built using Vite and React, with React Router handling seamless navigation, Daisy UI for modern UI components, and Redux Toolkit for efficient state management.
@@ -248,10 +251,76 @@ The application was successfully deployed on AWS EC2, configured with Nginx for 
         url: "https://www.google.com/search?q=daisyui",
       },
       {
-        name:"Socket.io",
+        name: "Socket.io",
         icon: <SiSocketdotio />,
         url: "https://www.google.com/search?q=socket.io",
-      }
+      },
+    ],
+  },
+  
+  {
+    title: "S2Chat",
+    githubUrl: "https://github.com/Sravan2808/GenAiChat",
+    websiteUrl: "https://genaichat.onrender.com/ui",
+    description: ` S2Chat (AI-Powered Chat Tool) | React, Node.js, Express, WebSockets, Redux
+
+Developed a full-stack real-time chat application featuring AI integrations, utilizing React for the frontend and Node.js/Express for the backend.
+Architected a real-time messaging system using WebSockets, seamlessly integrating client-side socket listeners with backend event handlers.
+Integrated advanced AI and utility services, including AI chat generation (ai.service), audio transcription (transcribe.controller), and live internet search capabilities.
+Implemented secure user authentication featuring cookie-based session management, protected React routes, and email notifications.
+Designed a highly interactive and responsive user interface using modern UI components, custom animations, and centralized state management via Redux Toolkit.
+`,
+    stack: [
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs />,
+        url: "https://www.google.com/search?q=node.js",
+      },
+      {
+        name: "React",
+        icon: <SiReact />,
+        url: "https://www.google.com/search?q=react",
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+        url: "https://www.google.com/search?q=express.js",
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+        url: "https://www.google.com/search?q=mongodb",
+      },
+      {
+        name: "Redux",
+        icon: <SiRedux />,
+        url: "https://www.google.com/search?q=redux",
+      },
+      {
+        name: "ShadCN UI",
+        icon: <SiShadcnui />,
+        url: "https://www.google.com/search?q=shadcn ui",
+      },
+      {
+        name: "Socket.io",
+        icon: <SiSocketdotio />,
+        url: "https://www.google.com/search?q=socket.io",
+      },
+      {
+        name: "LangChain",
+        icon: <SiLangchain />,
+        url: "https://www.google.com/search?q=langchain",
+      },
+      {
+        name: "NodeMailer",
+        icon: <MdMail />,
+        url: "https://www.google.com/search?q=nodemailer",
+      },
     ],
   },
 ];
