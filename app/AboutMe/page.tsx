@@ -27,25 +27,34 @@ const AboutMe = () => {
       <p className="font-normal">
         I mostly work with{" "}
         <span className="text-[var(--primary-foreground)] font-bold">
-          JavaScript, React, Next.js, Node.js, and MongoDB
+          JavaScript,TypeScript, React, Next.js, Node.js, PostgreSQL and MongoDB
         </span>
         , and I'm always open to learning new technologies and growing through
         new opportunities.
       </p>
 
-      <div className="flex items-center  justify-start mt-3 gap-3">
-        <Button className="cursor-pointer" onClick={() => openLink("https://x.com/SS19732004")}>
+      <div className="flex items-center flex-wrap justify-start mt-3 gap-3">
+        <Button
+          className="cursor-pointer"
+          onClick={() => openLink("https://x.com/SS19732004")}
+        >
           <SiMinutemailer /> Twitter Dm
         </Button>
         <div className="text-bold text-sm -rotate-45">OR</div>
-        <Button className="cursor-pointer" onClick={() => openLink("mailto:vsravansurya@gmail.com.com")}>
+        <Button
+          className="cursor-pointer"
+          onClick={() => openLink("mailto:vsravansurya@gmail.com.com")}
+        >
           <IoMail /> Email Me
         </Button>
         <div>|</div>
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button className="cursor-pointer" onClick={() => openLink("https://github.com/Sravan2808")}>
+            <Button
+              className="cursor-pointer"
+              onClick={() => openLink("https://github.com/Sravan2808")}
+            >
               <SiGithub />
             </Button>
           </TooltipTrigger>
@@ -56,7 +65,8 @@ const AboutMe = () => {
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button className="cursor-pointer"
+            <Button
+              className="cursor-pointer"
               onClick={() =>
                 openLink(
                   "https://drive.google.com/file/d/1SD95XKcO0feTLfJ77l5OIEn1Ihz0oIYe/view?usp=sharing",
