@@ -1,4 +1,4 @@
-(function oneko() {
+(function Cat() {
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
     window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
@@ -83,7 +83,7 @@
   };
 
   function init() {
-    nekoEl.id = 'oneko';
+    nekoEl.id = 'Cat';
     nekoEl.ariaHidden = true;
     nekoEl.style.width = '32px';
     nekoEl.style.height = '32px';
@@ -94,7 +94,7 @@
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = 2147483647;
 
-    let nekoFile = './oneko.gif';
+    let nekoFile = './cat.gif';
     const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat;
