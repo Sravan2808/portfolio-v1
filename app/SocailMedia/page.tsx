@@ -34,6 +34,10 @@ const Socialmedia = () => {
             blockMargin={4}
             fontSize={12}
             username="sravan2808"
+            theme={{
+              light: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+              dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+            }}
           />
         </div>
       </div>
