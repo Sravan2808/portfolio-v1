@@ -43,6 +43,7 @@ const Project = ({
             src={Background}
             alt="Project Background"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </motion.div>
@@ -71,6 +72,7 @@ const Project = ({
             src={PreviewImage}
             alt="Project Preview"
             fill
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
             className="object-contain"
           />
         </motion.div>

@@ -15,13 +15,17 @@ const Projects = () => {
             Title={project.title}
             Background={
               index === 0
-                ? "/images/Blue.jpeg"
-                : "/images/CuteBubblesRetro.jpeg"
+                ? "/images/GreenComic.jpeg"
+                : index === 2
+                  ? "/images/Blue.jpeg"
+                  : "/images/ComicYellow.jpeg"
             }
             PreviewImage={
               index === 0
-                ? "/images/devmatch.png"
-                : "/images/S2Chat.png"
+                ? "/images/S2Chat.png"
+                : index === 2
+                  ? "/images/DevMatch.png"
+                  : "/images/LeetLab.png"
             }
             Content={project.description.slice(0, 120) + "..."}
           />

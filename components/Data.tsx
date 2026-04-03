@@ -23,8 +23,10 @@ import {
   SiDaisyui,
   SiSocketdotio,
   SiLangchain,
+  SiClerk,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
+import { BiLogoPostgresql } from "react-icons/bi";
 import {
   FaLinkedinIn,
   FaMedium,
@@ -35,6 +37,8 @@ import {
 } from "react-icons/fa6";
 import { RiJavascriptFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
+import { describe } from "node:test";
+import { icons } from "lucide-react";
 
 export const socialLinks = [
   {
@@ -204,61 +208,6 @@ export const skills = [
 
 export const projects = [
   {
-    title: "DevMatch",
-    githubUrl: "https://github.com/Sravan2808/DevTinder",
-    websiteUrl: "https://devtinder-ebgf.onrender.com/",
-    description: `Developed a full-stack matchmaking platform inspired by Tinder, designed specifically for developers to connect, collaborate, and build networks. The frontend was built using Vite and React, with React Router handling seamless navigation, Daisy UI for modern UI components, and Redux Toolkit for efficient state management.
-
-Implemented a secure authentication system using JWT for authorization, Bcrypt for password hashing, and cookies with proper CORS configuration to ensure safe client-server communication. The application includes protected routes that validate user tokens and automatically redirect unauthorized users to the login page.
-
-Key features include user profile management with real-time updates and toast notifications, connection request functionality (send, ignore, accept, reject), and a personalized developer feed. The platform ensures a smooth end-to-end user experience, including login/logout flows, dynamic navbar updates, and consistent state handling with Redux DevTools integration.
-
-The application was successfully deployed on AWS EC2, configured with Nginx for efficient request handling. The frontend build was optimized using Vite and served through static hosting, ensuring fast performance and scalability.`,
-    stack: [
-      {
-        name: "JavaScript",
-        icon: <RiJavascriptFill />,
-        url: "https://www.google.com/search?q=javascript",
-      },
-      {
-        name: "Node.js",
-        icon: <SiNodedotjs />,
-        url: "https://www.google.com/search?q=node.js",
-      },
-      {
-        name: "React",
-        icon: <SiReact />,
-        url: "https://www.google.com/search?q=react",
-      },
-      {
-        name: "Express.js",
-        icon: <SiExpress />,
-        url: "https://www.google.com/search?q=express.js",
-      },
-      {
-        name: "MongoDB",
-        icon: <SiMongodb />,
-        url: "https://www.google.com/search?q=mongodb",
-      },
-      {
-        name: "Redux",
-        icon: <SiRedux />,
-        url: "https://www.google.com/search?q=redux",
-      },
-      {
-        name: "DaisyUI",
-        icon: <SiDaisyui />,
-        url: "https://www.google.com/search?q=daisyui",
-      },
-      {
-        name: "Socket.io",
-        icon: <SiSocketdotio />,
-        url: "https://www.google.com/search?q=socket.io",
-      },
-    ],
-  },
-  
-  {
     title: "S2Chat",
     githubUrl: "https://github.com/Sravan2808/GenAiChat",
     websiteUrl: "https://genaichat.onrender.com/ui",
@@ -320,6 +269,112 @@ Designed a highly interactive and responsive user interface using modern UI comp
         name: "NodeMailer",
         icon: <MdMail />,
         url: "https://www.google.com/search?q=nodemailer",
+      },
+    ],
+  },
+
+  {
+    title: "LeetLab",
+    githubUrl: "https://github.com/Sravan2808/LeetLab",
+    websiteUrl: "",
+    description: `LeetLab is a full-stack coding platform inspired by LeetCode, designed to help users practice programming problems, execute code, and track their progress efficiently. The platform features secure authentication powered by Clerk with GitHub OAuth integration and role-based access control for Admin and User roles. It integrates the Judge0 API to enable real-time code compilation and execution against custom test cases.
+
+An admin-only problem management system was developed using Prisma, allowing efficient creation and storage of coding problems and test cases. Additionally, the platform includes a submission tracking system that records user performance, execution results, and status history. To enhance structured learning, a playlist feature was implemented, enabling users to organize and practice problems in a guided manner.`,
+    stack: [
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        url: "https://www.google.com/search?q=next.js",
+      },
+      {
+        name: "Prisma",
+        icon: <SiPrisma />,
+        url: "https://www.google.com/search?q=prisma",
+      },
+      {
+        name: "postgreSQL",
+        icon: <BiLogoPostgresql />,
+        url: "https://www.google.com/search?q=postgresql",
+      },
+      {
+        name: "Clerk Auth",
+        icon: <SiClerk />, // using GitHub icon as a placeholder
+        url: "https://www.google.com/search?q=clerk+auth",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        url: "https://www.google.com/search?q=docker",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+        url: "https://www.google.com/search?q=tailwind+css",
+      },
+      {
+        name: "shadcn UI",
+        icon: <SiShadcnui />,
+        url: "https://www.google.com/search?q=shadcn+ui",
+      },
+    ],
+  },
+
+  {
+    title: "DevMatch",
+    githubUrl: "https://github.com/Sravan2808/DevTinder",
+    websiteUrl: "https://devtinder-ebgf.onrender.com/",
+    description: `Developed a full-stack matchmaking platform inspired by Tinder, designed specifically for developers to connect, collaborate, and build networks. The frontend was built using Vite and React, with React Router handling seamless navigation, Daisy UI for modern UI components, and Redux Toolkit for efficient state management.
+
+Implemented a secure authentication system using JWT for authorization, Bcrypt for password hashing, and cookies with proper CORS configuration to ensure safe client-server communication. The application includes protected routes that validate user tokens and automatically redirect unauthorized users to the login page.
+
+Key features include user profile management with real-time updates and toast notifications, connection request functionality (send, ignore, accept, reject), and a personalized developer feed. The platform ensures a smooth end-to-end user experience, including login/logout flows, dynamic navbar updates, and consistent state handling with Redux DevTools integration.
+
+The application was successfully deployed on AWS EC2, configured with Nginx for efficient request handling. The frontend build was optimized using Vite and served through static hosting, ensuring fast performance and scalability.`,
+    stack: [
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs />,
+        url: "https://www.google.com/search?q=node.js",
+      },
+      {
+        name: "React",
+        icon: <SiReact />,
+        url: "https://www.google.com/search?q=react",
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+        url: "https://www.google.com/search?q=express.js",
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+        url: "https://www.google.com/search?q=mongodb",
+      },
+      {
+        name: "Redux",
+        icon: <SiRedux />,
+        url: "https://www.google.com/search?q=redux",
+      },
+      {
+        name: "DaisyUI",
+        icon: <SiDaisyui />,
+        url: "https://www.google.com/search?q=daisyui",
+      },
+      {
+        name: "Socket.io",
+        icon: <SiSocketdotio />,
+        url: "https://www.google.com/search?q=socket.io",
       },
     ],
   },

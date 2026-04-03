@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ArrowIcon from "@/components/ArrowIcon";
 import { Button } from "@/components/ui/button";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -37,12 +38,22 @@ const ViewProjectContent = () => {
       </div>
 
       <div className="mx-auto mt-6 md:mt-8 border border-gray-600 rounded-xl p-1 w-full max-w-4xl">
-        <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl">
-          {index === 0 ? (
-            <img
+        <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl relative">
+          {index === 1 ? (
+            <Image
               className="w-full h-auto object-cover"
               src="/images/Chill Mario.gif"
               alt={`${project.title} Preview`}
+              width={1920}
+              height={1080}
+            />
+          ) :index === 2 ? (
+            <Image
+              className="w-full h-auto object-cover"
+              src="/images/Chill Mario.gif"
+              alt={`${project.title} Preview`}
+              width={1920}
+              height={1080}
             />
           ) : (
             <video
@@ -51,7 +62,7 @@ const ViewProjectContent = () => {
               loop
               muted
               playsInline
-              src="/Videos/demo/S2Chat.mp4"
+              src={`/Videos/demo/${project.title}.mp4`}
             />
           )}
         </div>
