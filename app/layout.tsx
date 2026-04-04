@@ -9,17 +9,17 @@ import Cat from "@/components/Cat";
 const myFont = localFont({
   src: [
     {
-      path: "/fonts/Instagram Sans.ttf",
+      path: "../public/fonts/Instagram Sans.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "/fonts/Instagram Sans Medium.ttf",
+      path: "../public/fonts/Instagram Sans Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "/fonts/Instagram Sans Bold.ttf",
+      path: "../public/fonts/Instagram Sans Bold.ttf",
       weight: "700",
       style: "normal",
     },
