@@ -3,26 +3,27 @@
 import Image from "next/image";
 import ArrowIcon from "@/components/ArrowIcon";
 import { Button } from "@/components/ui/button";
-import { useRouter, useSearchParams } from "next/navigation";
-import React, { Suspense } from "react";
+import { useRouter, useParams } from "next/navigation";
+import React from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { GoServer } from "react-icons/go";
 import { projects } from "@/components/Data";
 
-const ViewProjectContent = () => {
+const ViewProject = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const params = useParams();
+  const slug = params?.slug as string;
 
-  // Use index 0 as a default if the user visits the page without query parameters
-  const index = parseInt(searchParams.get("index") || "0");
-  const project = projects[index];
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) return <div>Project not found...</div>;
 
   const sendToBack = (url: string) => {
     if (url) window.open(url, "_blank");
   };
+
+  const hasVideo = project.slug === "s2chat"; // ✨ control which projects have demo videos
 
   return (
     <div className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
@@ -39,23 +40,7 @@ const ViewProjectContent = () => {
 
       <div className="mx-auto mt-6 md:mt-8 border border-gray-600 rounded-xl p-1 w-full max-w-4xl">
         <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl relative">
-          {index === 1 ? (
-            <Image
-              className="w-full h-auto object-cover"
-              src="/images/Chill Mario.gif"
-              alt={`${project.title} Preview`}
-              width={1920}
-              height={1080}
-            />
-          ) :index === 2 ? (
-            <Image
-              className="w-full h-auto object-cover"
-              src="/images/Chill Mario.gif"
-              alt={`${project.title} Preview`}
-              width={1920}
-              height={1080}
-            />
-          ) : (
+          {hasVideo ? (
             <video
               className="w-full h-auto object-cover"
               autoPlay
@@ -64,6 +49,14 @@ const ViewProjectContent = () => {
               playsInline
               src={`/Videos/demo/${project.title}.mp4`}
             />
+          ) : (
+            <Image
+              className="w-full h-auto object-cover"
+              src="/images/Chill Mario.gif"
+              alt={`${project.title} Preview`}
+              width={1920}
+              height={1080}
+            />
           )}
         </div>
       </div>
@@ -71,7 +64,11 @@ const ViewProjectContent = () => {
       <div className="w-full flex sm:flex-row items-start sm:items-center justify-between mt-6 gap-4 sm:gap-2">
         <div
           onClick={() => sendToBack(project.githubUrl)}
-          className={`flex group items-center justify-center transition-all duration-300 gap-2 ${project.githubUrl ? "cursor-pointer hover:underline" : "opacity-50 cursor-not-allowed"}`}
+          className={`flex group items-center justify-center transition-all duration-300 gap-2 ${
+            project.githubUrl
+              ? "cursor-pointer hover:underline"
+              : "opacity-50 cursor-not-allowed"
+          }`}
         >
           <SiGithub className="size-5" />
           <h1 className="text-base sm:text-lg">GitHub</h1>
@@ -84,7 +81,11 @@ const ViewProjectContent = () => {
         </div>
         <div
           onClick={() => sendToBack(project.websiteUrl)}
-          className={`flex group items-center justify-center transition-all duration-300 gap-2 ${project.websiteUrl ? "cursor-pointer hover:underline" : "opacity-50 cursor-not-allowed"}`}
+          className={`flex group items-center justify-center transition-all duration-300 gap-2 ${
+            project.websiteUrl
+              ? "cursor-pointer hover:underline"
+              : "opacity-50 cursor-not-allowed"
+          }`}
         >
           <GoServer className="size-5" />
           <h1 className="text-base sm:text-lg">Website</h1>
@@ -121,21 +122,6 @@ const ViewProjectContent = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-// Next.js standard states requiring Suspense for useSearchParams on dynamic pages.
-const ViewProject = () => {
-  return (
-    <Suspense
-      fallback={
-        <div className="mt-10 text-center text-gray-400">
-          Loading project...
-        </div>
-      }
-    >
-      <ViewProjectContent />
-    </Suspense>
   );
 };
 
