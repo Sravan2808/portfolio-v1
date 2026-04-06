@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { LinkPreview } from "@/components/ui/link-preview";
 import React from "react";
-import { GitHubCalendar } from "react-github-calendar";
 
 import { socialLinks } from "@/components/Data";
+import GitCalendar from "@/components/GitCalendar";
 
 const Socialmedia = () => {
   return (
@@ -27,20 +27,8 @@ const Socialmedia = () => {
         ))}
       </div>
 
-      <div className="mt-5 w-full overflow-x-auto flex justify-start md:justify-center pb-2">
-        <div className="min-w-max">
-          <GitHubCalendar
-            blockSize={12}
-            blockMargin={4}
-            fontSize={12}
-            username="sravan2808"
-            theme={{
-              light: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-              dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-            }}
-          />
-        </div>
-      </div>
+      <GitCalendar />
+
     </div>
   );
 };
