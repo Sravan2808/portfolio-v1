@@ -11,7 +11,7 @@ interface ProjectProps {
   Background: string;
   PreviewImage: string;
   Content: string;
-  index: number; // ✨ added index here
+  slug: string; // ✨ added slug here
 }
 
 const Project = ({
@@ -19,12 +19,12 @@ const Project = ({
   Background,
   PreviewImage,
   Content,
-  index,
+  slug,
 }: ProjectProps) => {
   const router = useRouter();
   return (
     <motion.div
-      onClick={() => router.push(`/ViewProject?index=${index}`)} // ✨ pass index into URL
+      onClick={() => router.push(`/ViewProject/${slug}`)} // ✨ pass slug into URL
       data-type="project"
       className="w-full sm:w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-pointer max-w-full"
       initial="initial"

@@ -10,28 +10,16 @@ const Projects = () => {
       <div className="flex flex-col md:flex-row h-fit relative items-center gap-10 md:flex-wrap justify-between rounded-lg p-4 md:border-2 md:border-gray-500 md:hover:border-gray-100/70 md:border-dashed">
         {projects.map((project, index) => (
           <Project
-            key={index}
-            index={index}
+            key={project.slug}
+            slug={project.slug}
             Title={project.title}
-            Background={
-              index === 0
-                ? "/images/GreenComic.jpeg"
-                : index === 2
-                  ? "/images/Blue.jpeg"
-                  : "/images/ComicYellow.jpeg"
-            }
-            PreviewImage={
-              index === 0
-                ? "/images/S2Chat.png"
-                : index === 2
-                  ? "/images/DevMatch.png"
-                  : "/images/LeetLab.png"
-            }
+            Background={project.background}
+            PreviewImage={project.previewImage}
             Content={project.description.slice(0, 120) + "..."}
           />
         ))}
       </div>
-      <div className="border w-fit mx-auto mt-2 border-stone-700 rounded-lg flex p-[1px] ">
+      <div className="border w-fit mx-auto mt-2 border-stone-700 rounded-lg flex p-[1px]">
         <div className="text-center flex items-center justify-center">
           <div className="w-fit flex items-start gap-1 border-2 px-3 py-1 bg-[#d1ccc2]/90 text-[var(--foreground)] border-gray-600 rounded-lg cursor-pointer hover:bg-[#d1ccc2] transition-all duration-300">
             View All <ArrowIcon rotate={-33} color="var(--foreground)" />

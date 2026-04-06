@@ -24,6 +24,7 @@ import {
   SiSocketdotio,
   SiLangchain,
   SiClerk,
+  SiFoodpanda,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -181,7 +182,7 @@ export const skills = [
   },
   {
     name: "Zustand",
-    icon: <FaDatabase />,
+    icon: <SiFoodpanda />,
     url: "https://www.google.com/search?q=zustand",
   }, // using db icon as fallback
   {
@@ -208,7 +209,11 @@ export const skills = [
 
 export const projects = [
   {
+    slug: "s2chat",
     title: "S2Chat",
+    background: "/images/GreenComic.jpeg",
+    previewImage: "/images/S2Chat.png",
+    demoVideo: "/Videos/demo/S2Chat.mp4",
     githubUrl: "https://github.com/Sravan2808/GenAiChat",
     websiteUrl: "https://genaichat.onrender.com/ui",
     description: ` S2Chat (AI-Powered Chat Tool) | React, Node.js, Express, WebSockets, Redux
@@ -274,7 +279,11 @@ Designed a highly interactive and responsive user interface using modern UI comp
   },
 
   {
+    slug: "leetlab",
     title: "LeetLab",
+    background: "/images/ComicYellow.jpeg",
+    previewImage: "/images/LeetLab.png",
+    demoVideo: null, // no demo video yet
     githubUrl: "https://github.com/Sravan2808/LeetLab",
     websiteUrl: "",
     description: `LeetLab is a full-stack coding platform inspired by LeetCode, designed to help users practice programming problems, execute code, and track their progress efficiently. The platform features secure authentication powered by Clerk with GitHub OAuth integration and role-based access control for Admin and User roles. It integrates the Judge0 API to enable real-time code compilation and execution against custom test cases.
@@ -303,7 +312,7 @@ An admin-only problem management system was developed using Prisma, allowing eff
       },
       {
         name: "Clerk Auth",
-        icon: <SiClerk />, // using GitHub icon as a placeholder
+        icon: <SiClerk />,
         url: "https://www.google.com/search?q=clerk+auth",
       },
       {
@@ -325,7 +334,11 @@ An admin-only problem management system was developed using Prisma, allowing eff
   },
 
   {
+    slug: "devmatch",
     title: "DevMatch",
+    background: "/images/Blue.jpeg",
+    previewImage: "/images/DevMatch.png",
+    demoVideo: null, // no demo video yet
     githubUrl: "https://github.com/Sravan2808/DevTinder",
     websiteUrl: "https://devtinder-ebgf.onrender.com/",
     description: `Developed a full-stack matchmaking platform inspired by Tinder, designed specifically for developers to connect, collaborate, and build networks. The frontend was built using Vite and React, with React Router handling seamless navigation, Daisy UI for modern UI components, and Redux Toolkit for efficient state management.
