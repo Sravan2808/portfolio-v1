@@ -26,8 +26,8 @@ const CalendarSkeleton = () => (
 
 const GitCalendar = () => {
   return (
-    <div className="mt-5 w-full overflow-x-auto flex justify-start md:justify-center pb-2">
-      <div className="min-w-max">
+    <div className="mt-5 w-full overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="w-max mx-auto px-4 md:px-2 flex justify-start">
         <GitHubCalendar
           blockSize={12}
           blockMargin={4}
