@@ -3,8 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { GlobalSounds } from "@/components/GlobalSounds";
-import { BichonFollower } from "@/components/bichon_follower";
-import Cat from "@/components/Cat";
+import AlternatingPet from "@/components/AlternatingPet";
 
 const myFont = localFont({
   src: [
@@ -44,8 +43,7 @@ export default function RootLayout({
         <GlobalSounds />
         <TooltipProvider>
           {children}
-          <Cat />
-          {/* <BichonFollower /> */}
+          <AlternatingPet />
         </TooltipProvider>
       </body>
     </html>
