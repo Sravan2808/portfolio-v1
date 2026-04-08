@@ -12,6 +12,7 @@ import { SiMinutemailer } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { openLink } from "@/components/openLink";
+import LastPlayed from "@/components/last_playlist";
 
 const AboutMe = () => {
   return (
@@ -43,7 +44,7 @@ const AboutMe = () => {
         <div className="text-bold text-sm -rotate-45">OR</div>
         <Button
           className="cursor-pointer"
-          onClick={() => openLink("mailto:vsravansurya@gmail.com.com")}
+          onClick={() => openLink("mailto:vsravansurya@gmail.com")}
         >
           <IoMail /> Email Me
         </Button>
@@ -80,6 +81,9 @@ const AboutMe = () => {
             <p>Resume</p>
           </TooltipContent>
         </Tooltip>
+      </div>
+      <div className="mt-6 w-full sm:mt-8">
+        <LastPlayed />
       </div>
     </div>
   );
