@@ -28,9 +28,7 @@ export default function LastPlayed() {
   // 🔄 Loading state
   if (loading) {
     return (
-      <p className="text-sm text-muted-foreground mt-2">
-        Loading music... 🎧
-      </p>
+      <p className="text-sm text-muted-foreground mt-2">Loading music... 🎧</p>
     );
   }
 
@@ -55,9 +53,7 @@ export default function LastPlayed() {
           className="shrink-0"
         />
 
-        <span className="shrink-0 font-medium text-secondary">
-          Last played
-        </span>
+        <span className="shrink-0 font-medium text-secondary">Last played</span>
 
         <span className="shrink-0"> — </span>
 
@@ -67,7 +63,9 @@ export default function LastPlayed() {
           rel="noopener noreferrer"
           className="flex min-w-0 flex-1 items-center gap-0.5 overflow-hidden text-secondary underline-offset-2 hover:underline"
         >
-          <span className="shrink-0">{track.title}</span>
+          <span className="shrink-0">
+            {track.title.replace(/\s*\(.*?\)\s*/g, "").trim()}
+          </span>
           <span className="shrink-0"> · </span>
           <span className="min-w-0 truncate">{track.artist}</span>
         </a>
