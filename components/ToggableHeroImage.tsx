@@ -18,7 +18,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 const ToggableHeroImage = () => {
   const [isFirst, setIsFirst] = useState<boolean>(true);
 
-  const currentImage = isFirst ? "/images/Hero2.jpeg" : "/images/Hero1.jpeg";
+  const currentImage = isFirst ? "https://unavatar.io/x/SS19732004" : "https://github.com/Sravan2808.png";
 
   return (
     <>
