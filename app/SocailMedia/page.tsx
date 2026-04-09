@@ -7,7 +7,7 @@ import GitCalendar from "@/components/GitCalendar";
 
 const Socialmedia = () => {
   return (
-    <div className="px-5 py-3 mt-3 rounded-lg">
+    <div className="px-5 py-3 rounded-lg">
       <h3>
         Here are my{" "}
         <span className="font-bold text-[var(--primary-foreground)]">
