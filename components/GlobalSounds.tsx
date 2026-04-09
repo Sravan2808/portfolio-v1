@@ -5,11 +5,11 @@ import { useEffect } from "react";
 export function GlobalSounds() {
   useEffect(() => {
     // Preload audio objects with URL-encoded spaces
-    const clickSound = new Audio("/audio/Mouse%20Click.wav");
+    const clickSound = new Audio("/audio/Menu%20Notification.mp3");
     const whooshSound = new Audio("/audio/Whoosh%202.mp3");
 
     // Setting volume explicitly if needed, optional
-    clickSound.volume = 0.5;
+    clickSound.volume = 0.15;
     whooshSound.volume = 0.5;
 
     // Ensure files are fully preloaded for zero latency

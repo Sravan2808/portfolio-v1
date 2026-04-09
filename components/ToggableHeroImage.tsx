@@ -28,10 +28,35 @@ const ToggableHeroImage = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentImage}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
+                initial={{
+                  opacity: 0,
+                  scale: 1.1,
+                  filter:
+                    "brightness(2) contrast(2) saturate(200%) hue-rotate(90deg)",
+                }}
+                animate={{
+                  opacity: [0, 1, 0.8, 1, 0.9, 1],
+                  x: [0, -8, 8, -4, 4, 0],
+                  y: [0, 8, -8, 4, -4, 0],
+                  skewX: [0, 20, -20, 10, -10, 0],
+                  filter: [
+                    "brightness(2) contrast(2) saturate(200%) hue-rotate(90deg)",
+                    "brightness(0.5) invert(1) hue-rotate(-90deg) blur(2px)",
+                    "brightness(1.5) contrast(1.5) saturate(150%) hue-rotate(45deg)",
+                    "brightness(1.2) contrast(1.2) saturate(120%) blur(1px)",
+                    "brightness(1) contrast(1) saturate(100%) hue-rotate(0deg)",
+                    "brightness(1) contrast(1) saturate(100%) hue-rotate(0deg)",
+                  ],
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 1.1,
+                  x: [0, 15, -15, 0],
+                  skewX: [0, 30, -30, 0],
+                  filter: "brightness(2) invert(1) hue-rotate(180deg)",
+                  transition: { duration: 0.15, ease: "linear" },
+                }}
+                transition={{ duration: 0.35, ease: "linear" }}
                 className="absolute inset-0"
               >
                 <MorphingDialogImage
