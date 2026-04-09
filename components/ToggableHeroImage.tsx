@@ -107,7 +107,7 @@ const ToggableHeroImage = () => {
 
           <div className="flex items-center gap-1">
             <MdLoop
-              data-type="whoosh"
+              data-type="glitch"
               onClick={() => setIsFirst((prev) => !prev)}
               className="cursor-pointer active:scale-110 transition-transform hover:text-gray-300"
             />

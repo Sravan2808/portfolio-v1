@@ -7,14 +7,17 @@ export function GlobalSounds() {
     // Preload audio objects with URL-encoded spaces
     const clickSound = new Audio("/audio/Menu%20Notification.mp3");
     const whooshSound = new Audio("/audio/Whoosh%202.mp3");
+    const glitchSound = new Audio("/audio/Fast%20Glitch%201.mp3");
 
     // Setting volume explicitly if needed, optional
     clickSound.volume = 0.15;
     whooshSound.volume = 0.5;
+    glitchSound.volume = 0.5;
 
     // Ensure files are fully preloaded for zero latency
     clickSound.preload = "auto";
     whooshSound.preload = "auto";
+    glitchSound.preload = "auto";
 
     const playSound = (sound: HTMLAudioElement) => {
       // Clone the node so rapid consecutive clicks don't cut each other off
@@ -30,11 +33,13 @@ export function GlobalSounds() {
       let target = e.target as HTMLElement | null;
       let shouldPlayClick = false;
       let shouldPlayWhoosh = false;
+      let shouldPlayGlitch = false;
 
       // Bubble up to check for specific elements or styles
       while (target && target !== document.body) {
         // If it's a project or blog link/card (adjust class/ID check based on your actual HTML)
         // Checking common attributes or text contexts for projects and blogs
+        const isGlitch = target.closest('[data-type="glitch"]');
         const isProjectOrBlog =
           target.closest('[data-type="project"]') ||
           target.closest('[data-type="blog"]') ||
@@ -42,7 +47,11 @@ export function GlobalSounds() {
           target.closest('a[href*="/Projects"]') ||
           target.closest('a[href*="/Blogs"]');
 
-        if (isProjectOrBlog) {
+        if (isGlitch) {
+          shouldPlayGlitch = true;
+          shouldPlayClick = false;
+          break;
+        } else if (isProjectOrBlog) {
           shouldPlayWhoosh = true;
           shouldPlayClick = false; // Override default click
           break;
@@ -63,7 +72,9 @@ export function GlobalSounds() {
         target = target.parentElement;
       }
 
-      if (shouldPlayWhoosh) {
+      if (shouldPlayGlitch) {
+        playSound(glitchSound);
+      } else if (shouldPlayWhoosh) {
         playSound(whooshSound);
       } else if (shouldPlayClick) {
         playSound(clickSound);
