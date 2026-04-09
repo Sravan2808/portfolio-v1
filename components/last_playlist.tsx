@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Track {
   title: string;
@@ -57,7 +58,7 @@ export default function LastPlayed() {
 
         <span className="shrink-0"> — </span>
 
-        <a
+        <Link
           href={track.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +69,7 @@ export default function LastPlayed() {
           </span>
           <span className="shrink-0"> · </span>
           <span className="min-w-0 truncate">{track.artist}</span>
-        </a>
+        </Link>
       </p>
     </div>
   );

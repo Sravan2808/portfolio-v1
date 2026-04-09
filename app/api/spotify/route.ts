@@ -11,12 +11,10 @@ export async function GET() {
 
     const data = await res.json();
 
-    // ✅ safety check
     if (!data?.recenttracks?.track) {
       return NextResponse.json(null);
     }
 
-    // ✅ handle both array & object cases
     const tracks = Array.isArray(data.recenttracks.track)
       ? data.recenttracks.track
       : [data.recenttracks.track];
@@ -27,10 +25,18 @@ export async function GET() {
 
     const track = tracks[0];
 
+    // ✅ Clean title (remove brackets)
+    const cleanTitle = track.name.replace(/\s*\(.*?\)\s*/g, "").trim();
+
+    // ✅ Create Spotify search URL
+    const spotifyUrl = `https://open.spotify.com/search/${encodeURIComponent(
+      `${cleanTitle} ${track.artist["#text"]}`
+    )}`;
+
     return NextResponse.json({
-      title: track.name,
+      title: cleanTitle,
       artist: track.artist["#text"],
-      link: track.url,
+      link: spotifyUrl, // 🔥 changed here
     });
   } catch (err) {
     console.error("LastFM error:", err);
