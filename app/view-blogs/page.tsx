@@ -30,6 +30,7 @@ const ViewBlogs = () => {
           />
         </div>
       </div>
+      
       <div className="mt-8 flex flex-col gap-4 md:gap-6 w-full max-w-4xl mx-auto">
         <Blog
           arr={["Node.js", "React", "JavaScript"]}

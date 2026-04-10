@@ -391,4 +391,54 @@ The application was successfully deployed on AWS EC2, configured with Nginx for 
       },
     ],
   },
+
+  {
+    slug: "TodoApp",
+    title: "TodoApp",
+    background: "/images/Black.jpeg",
+    previewImage: "/images/Todo.png",
+    demoVideo: "/Videos/demo/Todo.mp4",
+    githubUrl: "https://github.com/Sravan2808/Todo-Nextjs",
+    websiteUrl: "https://todo-nextjs-three-gray.vercel.app/",
+    description: `A modern, production-ready full-stack application built with Next.js (App Router) and React, designed for efficient task management with a scalable architecture.
+
+Built a seamless CRUD system using Server Actions for secure and optimized backend operations
+Implemented robust data handling with MongoDB and Mongoose
+Designed responsive and accessible UI using Tailwind CSS and shadcn/ui
+Integrated React Query for efficient server-state management, caching, and mutations
+Implemented form validation using React Hook Form with schema-based validation (Zod/Yup)
+Applied modular architecture with reusable components, custom hooks, and clean separation of concerns`,
+    stack: [
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        url: "https://www.google.com/search?q=next.js",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+        url: "https://www.google.com/search?q=tailwind+css",
+      },
+      {
+        name: "ShadCN",
+        icon: <SiShadcnui />,
+        url: "https://www.google.com/search?q=shadcn",
+      },
+      {
+        name: "Tanstack Query",
+        icon: <SiReactquery />,
+        url: "https://www.google.com/search?q=tanstack+query",
+      },
+      {
+        name: "Zustand",
+        icon: <SiFoodpanda />,
+        url: "https://www.google.com/search?q=zustand",
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+        url: "https://www.google.com/search?q=mongodb",
+      },
+    ],
+  },
 ];

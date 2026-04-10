@@ -19,11 +19,11 @@ const ViewProject = () => {
 
   if (!project) return <div>Project not found...</div>;
 
-  const sendToBack = (url: string) => {
+  const sendToBack = (url: string | undefined | null) => {
     if (url) window.open(url, "_blank");
   };
 
-  const hasVideo = project.slug === "s2chat"; // ✨ control which projects have demo videos
+  const hasVideo = Boolean(project.demoVideo);
 
   return (
     <div className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
@@ -40,14 +40,14 @@ const ViewProject = () => {
 
       <div className="mx-auto mt-6 md:mt-8 border border-gray-600 rounded-xl p-1 w-full max-w-4xl">
         <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl relative">
-          {hasVideo ? (
+          {hasVideo && project.demoVideo ? (
             <video
               className="w-full h-auto object-cover"
               autoPlay
               loop
               muted
               playsInline
-              src={`/Videos/demo/${project.title}.mp4`}
+              src={project.demoVideo}
             />
           ) : (
             <Image

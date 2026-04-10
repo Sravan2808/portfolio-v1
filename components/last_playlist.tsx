@@ -62,7 +62,7 @@ export default function LastPlayed() {
           href={track.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex min-w-0 flex-1 items-center gap-0.5 overflow-hidden text-secondary underline-offset-2 hover:underline"
+          className="relative flex min-w-0 w-fit items-center gap-0.5 overflow-hidden text-secondary after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-secondary after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 pb-0.5"
         >
           <span className="shrink-0">
             {track.title.replace(/\s*\(.*?\)\s*/g, "").trim()}
