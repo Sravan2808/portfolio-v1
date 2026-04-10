@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { FaChevronLeft } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -23,14 +24,17 @@ const ViewBlogs = () => {
 
       <div className="mx-auto mt-6 md:mt-8 border border-gray-600 rounded-xl p-1 w-full max-w-4xl">
         <div className="w-full h-full overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl">
-          <img
+          <Image
             className="w-full h-auto object-cover"
             src="/images/Blogs.gif"
             alt="Blog Preview"
+            width={1920}
+            height={1080}
+            unoptimized
           />
         </div>
       </div>
-      
+
       <div className="mt-8 flex flex-col gap-4 md:gap-6 w-full max-w-4xl mx-auto">
         <Blog
           arr={["Node.js", "React", "JavaScript"]}
