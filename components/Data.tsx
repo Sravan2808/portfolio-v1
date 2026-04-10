@@ -25,6 +25,13 @@ import {
   SiLangchain,
   SiClerk,
   SiFoodpanda,
+  SiJsonwebtokens,
+  SiPostman,
+  SiJavascript,
+  SiVite,
+  SiThreedotjs,
+  SiGooglesearchconsole,
+  SiLanggraph,
 } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -35,11 +42,12 @@ import {
   FaAws,
   FaDatabase,
   FaInstagram,
+  FaHtml5,
+  FaCss3Alt,
 } from "react-icons/fa6";
 import { RiJavascriptFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
-import { describe } from "node:test";
-import { icons } from "lucide-react";
+import { IoFlask } from "react-icons/io5";
 
 export const socialLinks = [
   {
@@ -208,6 +216,59 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    slug: "BattleAiArena",
+    title: "Battle AI Arena",
+    background: "/images/Purple.jpeg",
+    previewImage: "", // no preview image yet
+    demoVideo: null, // no demo video yet
+    githubUrl: "https://github.com/Sravan2808/BattleAiArena",
+    websiteUrl: "",
+    description: "coming soon...",
+    stack: [
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+        url: "https://www.google.com/search?q=typescript",
+      },
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs />,
+        url: "https://nodejs.org/",
+      },
+      {
+        name: "Express",
+        icon: <SiExpress />,
+        url: "https://expressjs.com/",
+      },
+      {
+        name: "React",
+        icon: <SiReact />,
+        url: "https://react.dev/",
+      },
+      {
+        name: "LangGraph",
+        icon: <SiLanggraph />,
+        url: "https://langchain-ai.github.io/langgraph/",
+      },
+      {
+        name:"LangChain",
+        icon: <SiLangchain />,
+        url: "https://www.google.com/search?q=langchain",
+      },
+      {
+        name: "Google Stitch",
+        icon: <IoFlask />,
+        url: "https://stitch.withgoogle.com/",
+      },
+    ],
+  },
+
   {
     slug: "s2chat",
     title: "S2Chat",
@@ -438,6 +499,168 @@ Applied modular architecture with reusable components, custom hooks, and clean s
         name: "MongoDB",
         icon: <SiMongodb />,
         url: "https://www.google.com/search?q=mongodb",
+      },
+    ],
+  },
+
+  {
+    slug: "Drizzle_Url_Shortner",
+    title: "Drizzle URL Shortener",
+    background: "/images/BrightBlue.jpeg",
+    previewImage: "/images/url.png",
+    demoVideo: null, // no demo video yet
+    githubUrl: "https://github.com/Sravan2808/Drizzle_Url_Shortner",
+    websiteUrl: "",
+    description: `Built a secure and scalable URL Shortener API using Node.js and Express, designed to convert long URLs into compact, shareable links with efficient redirection. The application integrates PostgreSQL with Drizzle ORM for type-safe database operations and structured schema management. Implemented JWT-based authentication with bcrypt to ensure secure user registration and protected access to private routes. Authenticated users can create, view, and delete their own shortened URLs, enabling personalized link management. The project is containerized using Docker for consistent local development and tested using Postman to validate API functionality and reliability.`,
+    stack: [
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs />,
+        url: "https://www.google.com/search?q=node.js",
+      },
+      {
+        name: "Express",
+        icon: <SiExpress />,
+        url: "https://www.google.com/search?q=express",
+      },
+      {
+        name: "PostgreSQL",
+        icon: <BiLogoPostgresql />,
+        url: "https://www.google.com/search?q=postgresql",
+      },
+      {
+        name: "Drizzle",
+        icon: <SiDrizzle />,
+        url: "https://www.google.com/search?q=drizzle",
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+        url: "https://www.google.com/search?q=docker",
+      },
+      {
+        name: "JWT",
+        icon: <SiJsonwebtokens />,
+        url: "https://www.google.com/search?q=jwt",
+      },
+      {
+        name: "Postman",
+        icon: <SiPostman />,
+        url: "https://www.google.com/search?q=postman",
+      },
+    ],
+  },
+
+  {
+    slug: "Mojito-CockTails",
+    title: "Mojito Cocktails",
+    background: "/images/Darkgreen.jpeg",
+    previewImage: "/images/MockTail.png",
+    demoVideo: "/Videos/demo/Mojito.mp4", // no demo video yet
+    githubUrl: "https://github.com/Sravan2808/Mojito-CockTails",
+    websiteUrl: "https://mojito-cock-tails.vercel.app/",
+    description: `Built a modern, animated single-page web application using React 19 and Vite, designed to showcase a cocktail bar experience with visually engaging sections. The application leverages Tailwind CSS for efficient, utility-first styling and integrates GSAP for smooth, high-performance animations that enhance user interaction. It features a well-structured component-based architecture, including sections like Navbar, Hero, About, Menu, Cocktails, Art gallery, and Contact, creating a seamless browsing experience. Additionally, react-responsive is used to ensure full responsiveness across devices, making the application visually appealing and accessible on all screen sizes.`,
+    stack: [
+      {
+        name: "React",
+        icon: <SiReact />,
+        url: "https://www.google.com/search?q=react",
+      },
+      {
+        name: "Vite",
+        icon: <SiVite />,
+        url: "https://www.google.com/search?q=vite",
+      },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+        url: "https://www.google.com/search?q=tailwind css",
+      },
+      {
+        name: "GSAP",
+        icon: <SiGreensock />,
+        url: "https://www.google.com/search?q=gsap",
+      },
+    ],
+  },
+
+  {
+    slug: "obys-agency",
+    title: "Obys Agency",
+    background: "/images/Red.jpeg",
+    previewImage: "/images/obys.png",
+    demoVideo: "/Videos/demo/obys.mp4", // no demo video yet
+    githubUrl: "https://github.com/Sravan2808/obys-agency",
+    websiteUrl: "https://obys-agency-mocha-alpha.vercel.app/",
+    description: `Developed an interactive and high-performance landing page for Obys Agency, focused on delivering a visually rich and immersive user experience. Implemented smooth scrolling using Locomotive Scroll and integrated GSAP to create dynamic text and image animations, enhancing overall UI/UX. The application is fully responsive across mobile and desktop devices, with performance optimizations such as lazy loading to ensure faster load times. A custom video player with advanced controls was added to provide seamless media interaction. Additionally, engaging features like interactive cursor effects, magnetic navigation elements, and a gooey effect on project visuals (desktop only) were incorporated to create a modern and captivating frontend experience.`,
+    stack: [
+      {
+        name: "HTML5",
+        icon: <FaHtml5 />,
+        url: "https://www.google.com/search?q=html5",
+      },
+      {
+        name: "CSS3",
+        icon: <FaCss3Alt />,
+        url: "https://www.google.com/search?q=css3",
+      },
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
+      },
+      {
+        name: "GSAP",
+        icon: <SiGreensock />,
+        url: "https://greensock.com/gsap/",
+      },
+      {
+        name: "Locomotive Scroll",
+        icon: <RiJavascriptFill />,
+        url: "https://locomotivemtl.github.io/locomotive-scroll/",
+      },
+      {
+        name: "Shery.js",
+        icon: <RiJavascriptFill />,
+        url: "https://sheryjs.com/",
+      },
+      {
+        name: "Three.js",
+        icon: <SiThreedotjs />,
+        url: "https://threejs.org/",
+      },
+    ],
+  },
+
+  {
+    slug: "Productivity_DashBoard",
+    title: "Productivity DashBoard",
+    background: "/images/orange.jpeg",
+    previewImage: "/images/Productive.png",
+    demoVideo: "/Videos/demo/Productivity.mp4",
+    githubUrl: "https://github.com/Sravan2808/Productivity_DashBoard",
+    websiteUrl: "https://sravan2808.github.io/Productivity_DashBoard/",
+    description: `Developed a single-page Productivity Dashboard web application that serves as a personal daily workspace with multiple integrated tools to enhance efficiency and planning. The application is built using HTML, CSS, and JavaScript, featuring a modular structure with interactive full-screen panels for tools like Todo List, Daily Planner, Motivation Quotes, Pomodoro Timer, and Daily Goals. It allows users to manage tasks and schedule hourly plans with localStorage persistence for a seamless experience. The dashboard also includes a Pomodoro timer with work and break sessions, live date and time updates, and real-time weather information fetched via an external API. Additionally, it supports dynamic theme switching and smooth UI interactions, making it a lightweight yet powerful client-side productivity solution.`,
+    stack: [
+      {
+        name: "HTML5",
+        icon: <FaHtml5 />,
+        url: "https://www.google.com/search?q=html5",
+      },
+      {
+        name: "CSS3",
+        icon: <FaCss3Alt />,
+        url: "https://www.google.com/search?q=css3",
+      },
+      {
+        name: "JavaScript",
+        icon: <RiJavascriptFill />,
+        url: "https://www.google.com/search?q=javascript",
       },
     ],
   },

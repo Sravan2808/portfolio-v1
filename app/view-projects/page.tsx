@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaChevronLeft } from "react-icons/fa6";
+import Link from "next/link";
+import { FaChevronLeft, FaArrowRightLong } from "react-icons/fa6";
+import { SiGithub } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { projects } from "@/components/Data";
@@ -46,6 +48,53 @@ const ViewProjects = () => {
             Content={project.description.slice(0, 120) + "..."}
           />
         ))}
+
+        {/* Coming Soon / GitHub Link Block */}
+        <Link
+          href="https://github.com/Sravan2808"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full sm:w-[300px] h-[340px] relative border border-stone-700/60 border-dashed rounded-lg p-[5px] cursor-pointer max-w-full flex items-center justify-center group overflow-hidden bg-stone-900/20 hover:bg-stone-800/80 transition-all duration-500 ease-out"
+        >
+          {/* Default State */}
+          <div className="flex flex-col items-center justify-center transition-all duration-500 group-hover:scale-95 group-hover:opacity-0 absolute inset-0">
+            <div className="w-16 h-16 rounded-full bg-stone-800 flex items-center justify-center mb-4 border border-stone-700">
+              <SiGithub className="text-3xl text-stone-400" />
+            </div>
+            <h2 className="text-xl flex items-center gap-2 font-bold text-stone-500">
+              More Projects{" "}
+              <FaArrowRightLong className="mt-[2px] -rotate-[33deg]" />
+            </h2>
+          </div>
+
+          {/* Hover State ("Focus Card" Effect) */}
+          <div className="flex flex-col items-center justify-center opacity-0 scale-105 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 absolute inset-0 z-10">
+            <h2 className="text-2xl font-bold text-white mb-2 tracking-wide">
+              Coming Soon
+            </h2>
+            <p className="text-sm font-medium text-stone-400 flex items-center gap-2">
+              Check my GitHub for more <SiGithub />
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      <div className="flex flex-col items-center justify-center p-8 mt-4">
+        <h1 className="text-lg text-stone-400 flex items-center gap-2">
+          For more cool projects, visit my
+          <Link
+            href="https://github.com/Sravan2808"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center font-bold text-stone-200 hover:text-white transition-colors"
+          >
+            <span className="relative">
+              GitHub
+              <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </span>
+            <FaArrowRightLong className="ml-2 text-sm opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 -rotate-[33deg] transition-all duration-300 ease-out" />
+          </Link>
+        </h1>
       </div>
     </div>
   );

@@ -47,6 +47,7 @@ const ViewProject = () => {
               loop
               muted
               playsInline
+              controls
               src={project.demoVideo}
             />
           ) : (
