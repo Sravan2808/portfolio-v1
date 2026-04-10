@@ -12,7 +12,7 @@ const NotFoundPage = () => {
         <div className="w-full relative overflow-hidden rounded-lg border border-stone-700 bg-stone-900 shadow-xl max-w-lg sm:max-w-2xl lg:max-w-3xl aspect-video">
           <Image
             className="w-full h-full object-cover"
-            src="/images/GoBack.gif"
+            src="/images/404.jpeg"
             alt="404 Not Found"
             width={1920}
             height={1080}
