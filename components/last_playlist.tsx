@@ -65,7 +65,10 @@ export default function LastPlayed() {
           className="relative flex min-w-0 w-fit items-center gap-0.5 overflow-hidden text-secondary after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-secondary after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 pb-0.5"
         >
           <span className="shrink-0">
-            {track.title.replace(/\s*\(.*?\)\s*/g, "").trim()}
+            {track.title
+              .replace(/\s*\(.*?\)\s*/g, "")
+              .replace(/\s*\[.*?\]\s*/g, "")
+              .trim()}
           </span>
           <span className="shrink-0"> · </span>
           <span className="min-w-0 truncate">{track.artist}</span>

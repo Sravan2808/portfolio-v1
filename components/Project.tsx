@@ -83,8 +83,18 @@ const Project = ({
         <h2 className="font-bold">{Title}</h2>
 
         <div className="flex items-center gap-2">
-          <PulseDot />
-          <span className="text-sm">Live</span>
+          {PreviewImage.includes("Coming Soon") ||
+          Title === "Battle AI Arena" ? (
+            <>
+              <PulseDot className="text-red-500" />
+              <span className="text-sm">Building</span>
+            </>
+          ) : (
+            <>
+              <PulseDot className="text-green-500" />
+              <span className="text-sm">Live</span>
+            </>
+          )}
         </div>
       </div>
 

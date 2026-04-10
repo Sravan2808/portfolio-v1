@@ -220,52 +220,33 @@ export const projects = [
     slug: "BattleAiArena",
     title: "Battle AI Arena",
     background: "/images/Purple.jpeg",
-    previewImage: "", // no preview image yet
+    previewImage: "/images/Coming Soon.jpeg", // no preview image yet
     demoVideo: null, // no demo video yet
     githubUrl: "https://github.com/Sravan2808/BattleAiArena",
     websiteUrl: "",
-    description: "coming soon...",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.",
     stack: [
       {
-        name: "TypeScript",
-        icon: <SiTypescript />,
-        url: "https://www.google.com/search?q=typescript",
+        name: "Lorem",
+        url: "https://www.google.com/search?q=Lorem",
       },
       {
-        name: "JavaScript",
-        icon: <RiJavascriptFill />,
-        url: "https://www.google.com/search?q=javascript",
+        name: "Ipsum",
+        url: "https://www.google.com/search?q=Ipsum",
       },
       {
-        name: "Node.js",
-        icon: <SiNodedotjs />,
-        url: "https://nodejs.org/",
+        name: "Dolor",
+        url: "https://www.google.com/search?q=Dolor",
       },
       {
-        name: "Express",
-        icon: <SiExpress />,
-        url: "https://expressjs.com/",
+        name: "Sit",
+        url: "https://www.google.com/search?q=Sit",
       },
       {
-        name: "React",
-        icon: <SiReact />,
-        url: "https://react.dev/",
-      },
-      {
-        name: "LangGraph",
-        icon: <SiLanggraph />,
-        url: "https://langchain-ai.github.io/langgraph/",
-      },
-      {
-        name:"LangChain",
-        icon: <SiLangchain />,
-        url: "https://www.google.com/search?q=langchain",
-      },
-      {
-        name: "Google Stitch",
-        icon: <IoFlask />,
-        url: "https://stitch.withgoogle.com/",
-      },
+        name: "Amet",
+        url: "https://www.google.com/search?q=Amet",
+      }
     ],
   },
 

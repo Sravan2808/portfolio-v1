@@ -116,7 +116,7 @@ const ViewProject = () => {
               onClick={() => sendToBack(skill.url)}
               className="flex items-center text-gray-400 cursor-pointer border-gray-400/75 bg-transparent gap-2 text-xs sm:text-sm"
             >
-              <span className="text-base sm:text-lg">{skill.icon}</span>
+              {'icon' in skill && <span className="text-base sm:text-lg">{skill.icon}</span>}
               <span>{skill.name}</span>
             </Button>
           ))}
