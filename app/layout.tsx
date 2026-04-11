@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     title: "Sravan Surya",
     description:
       "Design. Develop. Deploy. A showcase of my work, skills, and passion for technology.",
-    url: "https://portfolio-v1-7mdi.vercel.app",
     images: [
       {
         url: "/images/og-image.png",
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["/images/og-image.png"], 
+    images: ["/images/og-image.png"],
   },
 };
 
