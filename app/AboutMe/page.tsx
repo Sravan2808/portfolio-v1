@@ -34,7 +34,7 @@ const AboutMe = () => {
         new opportunities.
       </p>
 
-      <div className="mt-3 flex flex-nowrap items-center justify-start gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible sm:gap-3">
+      <div className="mt-3 flex  flex-nowrap items-center justify-start gap-1 overflow-x-hidden pb-1 sm:flex-wrap sm:overflow-visible sm:gap-3">
         <Button
           className="cursor-pointer shrink-0"
           onClick={() => openLink("https://x.com/SS19732004")}
@@ -56,11 +56,11 @@ const AboutMe = () => {
               className="cursor-pointer shrink-0"
               onClick={() => openLink("https://github.com/Sravan2808")}
             >
-              <SiGithub />
+              <SiGithub className="size-3.5" />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>GitHub</p>
+            <p className="size-1">GitHub</p>
           </TooltipContent>
         </Tooltip>
 
@@ -74,7 +74,7 @@ const AboutMe = () => {
                 )
               }
             >
-              <FaRegFilePdf />
+              <FaRegFilePdf className="size-3.5" />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
