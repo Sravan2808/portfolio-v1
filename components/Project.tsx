@@ -5,6 +5,7 @@ import PulseDot from "@/components/PulseDot";
 import ArrowIcon from "./ArrowIcon";
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ProjectProps {
   Title: string;
@@ -22,13 +23,17 @@ const Project = ({
   slug,
 }: ProjectProps) => {
   const router = useRouter();
+  const isMobile = useIsMobile();
+
   return (
     <motion.div
       onClick={() => router.push(`/ViewProject/${slug}`)} // ✨ pass slug into URL
       data-type="project"
       className="w-full sm:w-[300px] relative border border-stone-700 rounded-lg p-[5px] cursor-pointer max-w-full"
       initial="initial"
-      whileHover="hover"
+      whileHover={isMobile ? undefined : "hover"}
+      whileInView={isMobile ? "hover" : undefined}
+      viewport={{ amount: 0.5, once: false }}
     >
       {/* Top Image Section */}
       <div className="relative w-full h-[200px] overflow-hidden rounded-[14px]">
