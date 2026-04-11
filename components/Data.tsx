@@ -219,7 +219,7 @@ export const projects = [
   {
     slug: "BattleAiArena",
     title: "Battle AI Arena",
-    background: "/images/Purple.jpeg",
+    background: "/images/purple.jpeg",
     previewImage: "/images/Coming Soon.jpeg", // no preview image yet
     demoVideo: null, // no demo video yet
     githubUrl: "https://github.com/Sravan2808/BattleAiArena",
