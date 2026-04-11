@@ -379,7 +379,7 @@ An admin-only problem management system was developed using Prisma, allowing eff
     slug: "devmatch",
     title: "DevMatch",
     background: "/images/Blue.jpeg",
-    previewImage: "/images/DevMatch.png",
+    previewImage: "/images/devMatch.png",
     demoVideo: null, // no demo video yet
     githubUrl: "https://github.com/Sravan2808/DevTinder",
     websiteUrl: "https://devtinder-ebgf.onrender.com/",
