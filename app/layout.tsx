@@ -29,12 +29,17 @@ export const metadata: Metadata = {
   title: "Sravan Surya",
   description:
     "Design. Develop. Deploy. A showcase of my work, skills, and passion for technology.",
+  metadataBase: new URL("https://sravansurya.com"),
   openGraph: {
     title: "Sravan Surya",
     description:
       "Design. Develop. Deploy. A showcase of my work, skills, and passion for technology.",
-    images: ["./images/og-image.png"],
+    images: ["/images/og-image.png"],
     url: "https://sravansurya.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og-image.png"],
   },
 };
 
