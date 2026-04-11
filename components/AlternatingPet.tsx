@@ -5,7 +5,7 @@ import Cat from "./OnekoCat";
 import Dog from "./OnekoDog";
 
 export default function AlternatingPet() {
-  const [pet, setPet] = useState<"cat" | "dog" | null>(null);
+  const [pet, setPet] = useState<"cat" | "dog">("dog");
   const isInitialized = useRef(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function AlternatingPet() {
     const lastPet = sessionStorage.getItem("lastPet");
 
     // Determine the next pet to show
-    const nextPet = lastPet === "cat" ? "dog" : "cat";
+    const nextPet = lastPet === "dog" ? "cat" : "dog";
 
     // Save it for the next refresh
     sessionStorage.setItem("lastPet", nextPet);
