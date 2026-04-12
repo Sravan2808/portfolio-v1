@@ -5,7 +5,7 @@ import Cat from "./OnekoCat";
 import Dog from "./OnekoDog";
 
 export default function AlternatingPet() {
-  const [pet, setPet] = useState<"cat" | "dog">("dog");
+  const [pet, setPet] = useState<"cat" | "dog" | null>(null);
   const isInitialized = useRef(false);
 
   useEffect(() => {
@@ -28,5 +28,5 @@ export default function AlternatingPet() {
   if (pet === "cat") return <Cat />;
   if (pet === "dog") return <Dog />;
 
-  return null; // Return null on first render to avoid hydration errors
+  return null;
 }
