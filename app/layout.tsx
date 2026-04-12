@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     "Design. Develop. Deploy. A showcase of my work, skills, and passion for technology.",
 
   metadataBase: new URL("https://portfolio-v1-7mdi.vercel.app"),
-
+  icons: {
+    icon: "/images/favicon.ico", 
+    shortcut: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png", 
+  },
   openGraph: {
     title: "Sravan Surya",
     description:
