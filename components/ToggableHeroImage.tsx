@@ -14,11 +14,12 @@ import { MdLoop } from "react-icons/md";
 import Time from "@/components/Time";
 import { CiStopwatch } from "react-icons/ci";
 import { FlipWords } from "@/components/ui/flip-words";
+import Link from "next/link";
 
 const ToggableHeroImage = () => {
   const [isFirst, setIsFirst] = useState<boolean>(true);
 
-  const currentImage = isFirst ? "https://github.com/Sravan2808.png" : "https://unavatar.io/x/SS19732004";
+  const currentImage = isFirst ? "https://github.com/Sravan2808.png" : "/images/Hero1.jpeg";
 
   return (
     <>
@@ -85,14 +86,14 @@ const ToggableHeroImage = () => {
       <div className="flex flex-col justify-center translate-y-1">
         <h1 className="font-bold text-2xl md:text-3xl">Sravan Surya</h1>
 
-        <a
+        <Link
           href="https://x.com/SS19732004"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm md:text-lg hover:underline"
         >
           @ss19732004
-        </a>
+        </Link>
 
         <FlipWords
           className="text-gray-400 text-[14px] md:text-[15px] sm:-translate-x-2"
