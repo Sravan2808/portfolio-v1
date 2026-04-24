@@ -70,7 +70,7 @@ const AboutMe = () => {
               className="cursor-pointer shrink-0"
               onClick={() =>
                 openLink(
-                  "https://drive.google.com/file/d/1SD95XKcO0feTLfJ77l5OIEn1Ihz0oIYe/view?usp=sharing",
+                  "https://drive.google.com/file/d/1EpjmctEGsMRFgkhXBBoklI1nd_GLMN07/view?usp=sharing",
                 )
               }
             >
