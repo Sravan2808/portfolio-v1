@@ -4,6 +4,7 @@ import "./globals.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { GlobalSounds } from "@/components/GlobalSounds";
 import AlternatingPet from "@/components/AlternatingPet";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const myFont = localFont({
   src: [
@@ -32,15 +33,15 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://sravansurya.in"),
   icons: {
-    icon: "/favicon.ico", 
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png", 
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Sravan Surya",
     description:
       "Design. Develop. Deploy. A showcase of my work, skills, and passion for technology.",
-       url: "/", 
+    url: "/",
     images: [
       {
         url: "/images/og-image.png",
@@ -70,6 +71,7 @@ export default function RootLayout({
         <TooltipProvider>
           {children}
           <AlternatingPet />
+          <ScrollToTop />
         </TooltipProvider>
       </body>
     </html>
