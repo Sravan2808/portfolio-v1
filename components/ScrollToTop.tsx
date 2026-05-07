@@ -1,25 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type React from "react";
 import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
-type ScrollToTopButtonProps = Omit<
-  React.ComponentPropsWithoutRef<"button">,
-  "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration"
->;
-
-interface ScrollToTopProps extends ScrollToTopButtonProps {
+interface ScrollToTopProps {
+  className?: string;
   showAfter?: number;
 }
 
-const ScrollToTop = ({
-  className,
-  showAfter = 100,
-  ...props
-}: ScrollToTopProps) => {
+const ScrollToTop = ({ className, showAfter = 100 }: ScrollToTopProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -54,7 +45,6 @@ const ScrollToTop = ({
         scale: isVisible ? 1 : 0.98,
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      {...props}
     >
       <div className="flex items-center cursor-pointer justify-center rounded-[8px] border border-border w-full h-full p-1.5 bg-nonHover group-hover:bg-hover transition duration-300">
         <svg
