@@ -33,8 +33,14 @@ const ScrollToTop = ({ className, showAfter = 100 }: ScrollToTopProps) => {
       type="button"
       onClick={handleClick}
       className={cn(
-        "fixed bottom-4 right-4 z-50 group",
-        "sm:bottom-6 sm:right-6",
+        // Base positioning — safe inset for all devices including phones with home indicators
+        "fixed z-50 group",
+        "bottom-[max(1rem,env(safe-area-inset-bottom,1rem))]",
+        "right-[max(1rem,env(safe-area-inset-right,1rem))]",
+        // Slightly larger tap target on small screens, then grows on sm+
+        "w-10 h-10",
+        "sm:w-11 sm:h-11",
+        "md:w-12 md:h-12",
         className,
       )}
       aria-label="Scroll to top"
@@ -43,18 +49,28 @@ const ScrollToTop = ({ className, showAfter = 100 }: ScrollToTopProps) => {
         opacity: isVisible ? 1 : 0,
         y: isVisible ? 0 : 8,
         scale: isVisible ? 1 : 0.98,
+        pointerEvents: isVisible ? "auto" : "none",
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
     >
-      <div className="flex items-center cursor-pointer justify-center rounded-[8px] border border-border w-full h-full p-1.5 bg-nonHover group-hover:bg-hover transition duration-300">
+      <div
+        className={cn(
+          "flex items-center justify-center w-full h-full cursor-pointer",
+          "rounded-[8px] border border-border",
+          "bg-nonHover group-hover:bg-hover",
+          "transition duration-300",
+          // Tap highlight removed on touch devices to avoid sticky highlight
+          "touch-manipulation select-none",
+        )}
+      >
         <svg
           stroke="currentColor"
           fill="currentColor"
           strokeWidth="0"
           viewBox="0 0 512 512"
-          className="size-6 text-background"
-          height="1em"
-          width="1em"
+          // Icon scales with button: 20px on mobile, 22px on sm, 24px on md+
+          className="w-5 h-5 sm:w-[22px] sm:h-[22px] md:w-6 md:h-6 text-background"
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -63,7 +79,7 @@ const ScrollToTop = ({ className, showAfter = 100 }: ScrollToTopProps) => {
             strokeLinejoin="round"
             strokeWidth="48"
             d="m112 244 144-144 144 144M256 120v292"
-          ></path>
+          />
         </svg>
       </div>
     </motion.button>
