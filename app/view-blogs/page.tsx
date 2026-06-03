@@ -6,11 +6,12 @@ import { FaChevronLeft } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Blog from "@/components/Blog";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const ViewBlogs = () => {
   const router = useRouter();
   return (
-    <div className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
+    <BlurFadeIn className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
       <div className="mt-8 md:mt-14 flex flex-row items-center justify-start gap-3 md:gap-5 font-bold text-lg sm:text-xl md:text-2xl">
         <Button
           onClick={() => router.back()}
@@ -49,7 +50,7 @@ const ViewBlogs = () => {
           url="https://medium.com/@sravansurya/how-i-solved-jwt-logout-security-using-redis-token-blacklisting-24377e81d4fe"
         />
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 

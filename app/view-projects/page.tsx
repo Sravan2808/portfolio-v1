@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { projects } from "@/components/Data";
 import Project from "@/components/Project";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const ViewProjects = () => {
   const router = useRouter();
   return (
-    <div className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
+    <BlurFadeIn className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
       <div className="mt-8 md:mt-14 flex flex-row items-center justify-start gap-3 md:gap-5 font-bold text-lg sm:text-xl md:text-2xl">
         <Button
           onClick={() => router.back()}
@@ -96,7 +97,7 @@ const ViewProjects = () => {
           </Link>
         </h1>
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 

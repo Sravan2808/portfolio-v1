@@ -9,6 +9,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { GoServer } from "react-icons/go";
 import { projects } from "@/components/Data";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const ViewProject = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const ViewProject = () => {
   const hasVideo = Boolean(project.demoVideo);
 
   return (
-    <div className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
+    <BlurFadeIn className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
       <div className="mt-8 md:mt-14 flex flex-row items-center justify-start gap-3 md:gap-5 font-bold text-lg sm:text-xl md:text-2xl">
         <Button
           onClick={() => router.back()}
@@ -116,13 +117,15 @@ const ViewProject = () => {
               onClick={() => sendToBack(skill.url)}
               className="flex items-center text-gray-400 cursor-pointer border-gray-400/75 bg-transparent gap-2 text-xs sm:text-sm"
             >
-              {'icon' in skill && <span className="text-base sm:text-lg">{skill.icon}</span>}
+              {"icon" in skill && (
+                <span className="text-base sm:text-lg">{skill.icon}</span>
+              )}
               <span>{skill.name}</span>
             </Button>
           ))}
         </div>
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 

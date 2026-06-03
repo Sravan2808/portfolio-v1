@@ -13,10 +13,11 @@ import { SiGithub } from "react-icons/si";
 import { FaRegFilePdf } from "react-icons/fa6";
 import { openLink } from "@/components/openLink";
 import LastPlayed from "@/components/last_playlist";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const AboutMe = () => {
   return (
-    <div className="px-5 py-3  mt-5 rounded-lg ">
+    <BlurFadeIn className="px-5 py-3 mt-5 rounded-lg">
       <p className="font-normal">
         Hey, I'm Sravan Surya a{" "}
         <span className="font-bold text-primary-foreground">
@@ -85,7 +86,7 @@ const AboutMe = () => {
       <div className="mt-6 w-full sm:mt-8">
         <LastPlayed />
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 
