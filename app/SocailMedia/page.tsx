@@ -4,10 +4,11 @@ import React from "react";
 
 import { socialLinks } from "@/components/Data";
 import GitCalendar from "@/components/GitCalendar";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const Socialmedia = () => {
   return (
-    <div className="px-5 py-3 rounded-lg">
+    <BlurFadeIn className="px-5 py-3 rounded-lg">
       <h3>
         Here are my{" "}
         <span className="font-bold text-[var(--primary-foreground)]">
@@ -28,8 +29,7 @@ const Socialmedia = () => {
       </div>
 
       <GitCalendar />
-
-    </div>
+    </BlurFadeIn>
   );
 };
 

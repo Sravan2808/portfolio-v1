@@ -3,13 +3,14 @@
 import React from "react";
 import { skills } from "@/components/Data";
 import { Button } from "@/components/ui/button";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const Skills = () => {
   const sendToBack = (url: string) => {
     if (url) window.open(url, "_blank");
   };
   return (
-    <div className="px-4 sm:px-5 py-3 mt-3 mb-5 flex flex-col gap-2 rounded-lg">
+    <BlurFadeIn className="px-4 sm:px-5 py-3 mt-3 mb-5 flex flex-col gap-2 rounded-lg">
       <h1 className="font-bold text-xl sm:text-2xl mb-3">
         Skills & Technologies
       </h1>
@@ -26,7 +27,7 @@ const Skills = () => {
           </Button>
         ))}
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 

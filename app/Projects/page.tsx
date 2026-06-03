@@ -4,11 +4,12 @@ import Project from "@/components/Project";
 import { projects } from "@/components/Data";
 import React from "react";
 import { useRouter } from "next/navigation";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const Projects = () => {
   const router = useRouter();
   return (
-    <div className="px-5 py-3 mt-3 mb-5 rounded-lg">
+    <BlurFadeIn className="px-5 py-3 mt-3 mb-5 rounded-lg">
       <h1 className="font-bold text-2xl mb-3">Projects</h1>
       <div className="flex flex-col md:flex-row h-fit relative items-center gap-10 md:flex-wrap justify-between rounded-lg p-4 md:border-2 md:border-gray-500 md:hover:border-gray-100/70 md:border-dashed">
         {projects.slice(0, 4).map((project, index) => (
@@ -32,7 +33,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 

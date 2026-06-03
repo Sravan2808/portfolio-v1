@@ -2,11 +2,12 @@
 import ArrowIcon from "@/components/ArrowIcon";
 import Blog from "@/components/Blog";
 import { useRouter } from "next/navigation";
+import BlurFadeIn from "@/components/BlurFadeIn";
 
 const Blogs = () => {
   const router = useRouter();
   return (
-    <div className="px-5 py-3 mt-3 mb-5 flex flex-col gap-2 rounded-lg">
+    <BlurFadeIn className="px-5 py-3 mt-3 mb-5 flex flex-col gap-2 rounded-lg">
       <h1 className="font-bold text-2xl mb-3">Blogs</h1>
       <Blog
         arr={["Node.js", "React", "JavaScript"]}
@@ -22,12 +23,15 @@ const Blogs = () => {
       />
       <div className="border w-fit mx-auto mt-2 border-stone-700 rounded-lg flex p-px ">
         <div className="text-center flex items-center justify-center">
-          <div onClick={() => router.push("/view-blogs  ")}  className="w-fit flex items-start gap-1 border-2 px-3 py-1 bg-[#d1ccc2]/90 text-foreground border-gray-600 rounded-lg cursor-pointer hover:bg-[#d1ccc2] transition-all duration-300">
+          <div
+            onClick={() => router.push("/view-blogs  ")}
+            className="w-fit flex items-start gap-1 border-2 px-3 py-1 bg-[#d1ccc2]/90 text-foreground border-gray-600 rounded-lg cursor-pointer hover:bg-[#d1ccc2] transition-all duration-300"
+          >
             View All <ArrowIcon rotate={-33} color="var(--foreground)" />
           </div>
         </div>
       </div>
-    </div>
+    </BlurFadeIn>
   );
 };
 
