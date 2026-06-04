@@ -27,7 +27,10 @@ const ViewProject = () => {
   const hasVideo = Boolean(project.demoVideo);
 
   return (
-    <BlurFadeIn className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5">
+    <BlurFadeIn
+      className="px-4 sm:px-6 md:px-8 w-full max-w-5xl mx-auto pb-5"
+      inView={false}
+    >
       <div className="mt-8 md:mt-14 flex flex-row items-center justify-start gap-3 md:gap-5 font-bold text-lg sm:text-xl md:text-2xl">
         <Button
           onClick={() => router.back()}
