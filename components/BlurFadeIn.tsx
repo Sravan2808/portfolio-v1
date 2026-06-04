@@ -12,6 +12,7 @@ type BlurFadeInProps = {
   once?: boolean;
   yOffset?: number;
   blurPx?: number;
+  inView?: boolean;
 };
 
 const BlurFadeIn = ({
@@ -22,14 +23,19 @@ const BlurFadeIn = ({
   once = true,
   yOffset = 16,
   blurPx = 12,
+  inView = true,
 }: BlurFadeInProps) => {
+  const hidden = { opacity: 0, y: yOffset, filter: `blur(${blurPx}px)` };
+  const visible = { opacity: 1, y: 0, filter: "blur(0px)" };
+
   return (
     <motion.div
       className={cn(className)}
-      initial={{ opacity: 0, y: yOffset, filter: `blur(${blurPx}px)` }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={hidden}
+      animate={inView ? undefined : visible}
+      whileInView={inView ? visible : undefined}
       transition={{ duration, delay: delayMs / 1000, ease: "easeOut" }}
-      viewport={{ once, amount: 0.2 }}
+      viewport={inView ? { once, amount: 0.2 } : undefined}
     >
       {children}
     </motion.div>
