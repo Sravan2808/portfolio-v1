@@ -15,6 +15,7 @@ import Time from "@/components/Time";
 import { CiStopwatch } from "react-icons/ci";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
+import VisitorCount from "./VisitorsCount";
 
 const ToggableHeroImage = () => {
   const [isFirst, setIsFirst] = useState<boolean>(true);
@@ -113,6 +114,7 @@ const ToggableHeroImage = () => {
               className="cursor-pointer active:scale-110 transition-transform hover:text-gray-300"
             />
           </div>
+          <VisitorCount />
         </div>
       </div>
     </>
