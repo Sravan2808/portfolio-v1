@@ -16,11 +16,17 @@ import { CiStopwatch } from "react-icons/ci";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 import VisitorCount from "./VisitorsCount";
+import MascotOverlay from "@/components/MascotOverlay";
 
 const ToggableHeroImage = () => {
   const [isFirst, setIsFirst] = useState<boolean>(true);
 
-  const currentImage = isFirst ? "https://github.com/Sravan2808.png" : "/images/Hero1.jpeg";
+  const currentImage = isFirst
+    ? "/images/hero2-base.jpg"
+    : "/images/hero1-base.jpg";
+  const currentOverlay = isFirst
+    ? "/images/hero2-shine.png"
+    : "/images/hero1-lighter.png";
 
   return (
     <>
@@ -61,12 +67,15 @@ const ToggableHeroImage = () => {
                 transition={{ duration: 0.35, ease: "linear" }}
                 className="absolute inset-0"
               >
-                <MorphingDialogImage
-                  key={`trigger-${currentImage}`}
-                  className="w-full h-full rounded-3xl object-cover"
-                  src={currentImage}
-                  alt="Hero"
-                />
+                <div className="relative h-full w-full">
+                  <MorphingDialogImage
+                    key={`trigger-${currentImage}`}
+                    className="block h-full w-full rounded-3xl object-cover"
+                    src={currentImage}
+                    alt="Hero"
+                  />
+                  <MascotOverlay src={currentOverlay} strength={5} />
+                </div>
               </motion.div>
             </AnimatePresence>
           </MorphingDialogTrigger>
